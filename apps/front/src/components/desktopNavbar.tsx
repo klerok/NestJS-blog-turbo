@@ -21,14 +21,14 @@ const DesktopNavbar = (props: Props) => {
   const isScrolledDown = scrollPosition > 10;
   return (
     <nav
-      className={cn("fixed w-full z-30 text-white top-0 block", {
+      className={cn("hidden fixed w-full z-30 text-white top-0 md:block", {
         "bg-white text-gray-700 shadow-md": isScrolledDown,
       })}
     >
       <div className="flex items-center px-4 py-4 container">
         {props.children}
       </div>
-      <hr className="border-b border-gray-100 opacity-25"/>
+      <hr className="border-b border-gray-100 opacity-25" />
     </nav>
   );
 };
