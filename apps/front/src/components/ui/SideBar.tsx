@@ -11,15 +11,15 @@ type Props = PropsWithChildren<{
 
 const SideBar = (props: Props) => {
   const [show, setShow] = useState(false);
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   useOnClickOutside(ref as RefObject<HTMLElement>, () => setShow(false))
   return (
     <>
       <button onClick={() => setShow((prev) => !prev)}>
         {props.triggerIcon}
       </button>
-      ref={ref}
       <div
+        ref={ref as RefObject<HTMLDivElement>}
         className={cn(
           "w-60 absolute top-0 z-50 duration-300 transition-all bg-white rounded-r-md min-h-screen",
           {

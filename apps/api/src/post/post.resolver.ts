@@ -14,7 +14,7 @@ type GqlContext = {
 export class PostResolver {
   constructor(private readonly postService: PostService) {}
 
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Query(() => [Post], { name: 'posts' })
   findAll(@Context() context: GqlContext) {
     const user = context.req.user;
