@@ -1,6 +1,5 @@
 import { fetchPostById } from "@/lib/actions/postActions";
 import Image from "next/image";
-import DOMPurify from "dompurify";
 import SanitizedContent from "./_components/SanitizedContent";
 
 type Props = {
