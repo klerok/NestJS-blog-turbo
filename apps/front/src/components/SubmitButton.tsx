@@ -1,3 +1,4 @@
+"use client";
 import { ButtonProps } from "@base-ui/react/button";
 import { Button } from "./ui/button";
 import { useFormStatus } from "react-dom";

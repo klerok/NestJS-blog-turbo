@@ -60,7 +60,7 @@ type Query {
 
 type Mutation {
   createUser(createUserInput: CreateUserInput!): User!
-  singIn(singInInput: SingInInput!): AuthPayload!
+  signIn(signInInput: SignInInput!): AuthPayload!
 }
 
 input CreateUserInput {
@@ -71,7 +71,7 @@ input CreateUserInput {
   avatar: String
 }
 
-input SingInInput {
+input SignInInput {
   email: String!
   password: String!
 }

@@ -1,5 +1,5 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { SingInInput } from './dto/singin.input';
+import { SignInInput } from './dto/signin.input';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { verify } from 'argon2';
 import { JwtService } from '@nestjs/jwt';
@@ -12,7 +12,7 @@ export class AuthService {
     private prisma: PrismaService,
     private jwtService: JwtService,
   ) {}
-  async validateLocalUser({ email, password }: SingInInput) {
+  async validateLocalUser({ email, password }: SignInInput) {
     const user = await this.prisma.user.findUnique({
       where: { email },
     });
