@@ -26,3 +26,12 @@ export type Tag = {
   id: number;
   name: string;
 };
+
+export type CommentEntity = {
+  id: number;
+  content: string;
+  post: Post;
+  author: User;
+  createdAt: Date;
+  updatedAt: Date;
+};
