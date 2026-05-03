@@ -13,9 +13,9 @@ export class CreateUserInput {
   @IsEmail()
   email: string;
 
-  @Field(() => String, { nullable: true })
+  @Field({ nullable: true })
   bio?: string;
 
-  @Field(() => String, { nullable: true })
+  @Field({ nullable: true })
   avatar?: string;
 }
