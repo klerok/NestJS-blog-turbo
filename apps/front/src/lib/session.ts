@@ -13,7 +13,7 @@ export type Session = {
   accessToken: string;
 };
 
-const secretKey = process.env.SECRET_KEY!;
+const secretKey = process.env.SESSION_SECRET_KEY!;
 const encodedKey = new TextEncoder().encode(secretKey);
 
 export async function createSession(payload: Session) {

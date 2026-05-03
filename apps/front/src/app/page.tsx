@@ -14,6 +14,7 @@ export default async function Home({ searchParams }: Props) {
     page: page ? +page : undefined,
   });
   const session = await getSession()
+  console.log(session)
   return (
     <main>
       <Hero />
