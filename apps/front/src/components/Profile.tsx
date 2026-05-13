@@ -43,9 +43,9 @@ const Profile = ({ user }: Props) => {
             <PencilSquareIcon className="w-4" />
             <span>Create new Post</span>
           </Link>
-          <Link href="/user/my-posts">
+          <Link href="/user/posts">
             <ListBulletIcon className="w-4" />
-            <span>My Posts</span>
+            <span>Posts</span>
           </Link>
         </div>
       </PopoverContent>
