@@ -38,7 +38,7 @@ const AddComment = (props: Props) => {
     toast(state?.ok ? "Success!" : "Oops!", {
       description: state?.message ?? "",
     });
-    if (state?.ok) props.refetch()
+    if (state?.ok) props.refetch();
   }, [state]);
   return (
     <Dialog open={state?.open}>
